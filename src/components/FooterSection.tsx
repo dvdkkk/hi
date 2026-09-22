@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { COMPANY_INFO } from '../data/bootcampData';
+import { handlePhoneClick } from '../utils/consultation';
 import { Phone } from 'lucide-react';
 import { KLogoIcon } from './KLogoIcon';
 import { PrivacyModal } from './PrivacyModal';
@@ -32,7 +33,12 @@ export const FooterSection: React.FC = () => {
 
             <div className="flex items-center gap-3 text-white font-black text-lg">
               <Phone className="w-5 h-5 text-[#c5a47e]" />
-              <a href={`tel:${COMPANY_INFO.phone}`} className="hover:text-[#c5a47e] transition-colors">
+              <a
+                href={`tel:${COMPANY_INFO.phone}`}
+                onClick={(e) => handlePhoneClick(e, COMPANY_INFO.phone)}
+                className="hover:text-[#c5a47e] transition-colors cursor-pointer"
+                title={`문의 전화 (${COMPANY_INFO.phone})`}
+              >
                 {COMPANY_INFO.phone}
               </a>
             </div>

@@ -20,16 +20,7 @@ export const TargetAudienceSection: React.FC = () => {
   };
 
   const handleInquiryScroll = () => {
-    const formElement = document.getElementById('fast-inquiry-form');
-    const sectionElement = document.getElementById('fast-inquiry');
-
-    if (window.innerWidth < 1024 && formElement) {
-      formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else if (sectionElement) {
-      sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else if (formElement) {
-      formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    window.open('https://naver.me/FBMccKY2', '_blank', 'noopener,noreferrer');
   };
 
   return (

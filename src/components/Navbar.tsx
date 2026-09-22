@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, Calculator, Menu, X, ChevronRight, Award } from 'lucide-react';
 import { KLogoIcon } from './KLogoIcon';
+import { COMPANY_INFO } from '../data/bootcampData';
+import { handlePhoneClick } from '../utils/consultation';
 
 interface NavbarProps {
   onOpenApplication: () => void;
@@ -74,11 +76,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenApplication, onOpenCalcula
         {/* Desktop Action Buttons */}
         <div className="hidden sm:flex items-center gap-3">
           <a
-            href="tel:1661-9726"
-            className="hidden lg:flex items-center gap-1.5 text-xs font-semibold text-gray-300 hover:text-white px-2 py-2 transition-colors"
+            href={`tel:${COMPANY_INFO.phone}`}
+            onClick={(e) => handlePhoneClick(e, COMPANY_INFO.phone)}
+            className="hidden lg:flex items-center gap-1.5 text-xs font-semibold text-gray-300 hover:text-white px-2 py-2 transition-colors cursor-pointer"
+            title={`전화상담 ${COMPANY_INFO.phone}`}
           >
             <Phone className="w-3.5 h-3.5 text-[#c5a47e]" />
-            <span>1661-9726</span>
+            <span>{COMPANY_INFO.phone}</span>
           </a>
 
           <button
