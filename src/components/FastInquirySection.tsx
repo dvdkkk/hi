@@ -45,9 +45,7 @@ export const FastInquirySection: React.FC<FastInquirySectionProps> = () => {
                   <div>
                     <div className="flex items-center gap-2">
                       <span className="text-xs font-bold text-black/70">전화 문의</span>
-                      <span className="text-[10px] font-bold bg-black text-white px-2 py-0.5 rounded-full">
-                        PC: 상담신청 / 모바일: 바로연결
-                      </span>
+                      
                     </div>
                     <a
                       href={`tel:${COMPANY_INFO.phone}`}
